@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lab 5</title>
+    <title>NBA Stats</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-    <table id="player-stats">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Team</th>
-                <th>Points</th>
-                <th>Rebounds</th>
-                <th>Assists</th>
-            </tr>
-        </thead>
-        <tbody id="player-rows">
-        <!-- this is filled with JS -->
-        </tbody>
-    </table>
+    <div class="container">
+        <header>
+            <h1>NBA Player Stats</h1>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </header>
 
+        <search class="table-filters">
+            <input type="text" id="search" placeholder="Search players...">
+            <select id="team-filter" class="select-filter">
+                <option value="all">All</option>
+                <option value="Team">Team</option>
+                <option value="Points">Points</option>
+                <option value="Rebounds">Rebounds</option>
+                <option value="Assists">Assists</option>
+                <option value="Turnovers">Turn overs</option>
+                <!-- Teams will be populated in JS -->
+            </select>
+        </search>
 
-
-
+        <table id="player-stats">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Team</th>
+                    <th>Points</th>
+                    <th>Rebounds</th>
+                    <th>Assists</th>
+                    <th>Blocks</th>
+                    <th>Turn overs</th>
+                </tr>
+            </thead>
+            <tbody id="player-rows">
+                <!-- Rows will be populated in JS -->
+            </tbody>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
